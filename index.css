@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ====================================================== */
+.__navbar-container {
+  background-color: #3c3c3c;
+}
+
+.__navbar-logo {
+  color: white;
+}
+
+.__navbar-search input {
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  padding-left: 50px;
+  border-radius: 25px;
+  font-weight: 600;
+  width: 23vw;
+}
+
+.__navbar-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.__navbar-search {
+  position: relative;
+}
+
+.__navbar-search img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 16px;
+  top: 12px;
+}
+
+.__navbar-list-menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.__navbar-list-menu a:hover {
+  color: rgb(206, 205, 205);
+}
+
+.__navbar-list-button {
+  display: flex;
+  gap: 14px;
+}
+
+.__navbar-list-button button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-weight: 500;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: all ease-in 0.2s;
+}
+
+.__navbar-list-button button:nth-child(1) {
+  background-color: rgb(174, 11, 128);
+  border: 2px solid rgb(174, 11, 128);
+  color: white;
+}
+
+.__navbar-list-button button:nth-child(2) {
+  background-color: transparent;
+  border: 2px solid rgb(174, 11, 128);
+  color: rgb(174, 11, 128);
+}
+
+.__navbar-list-button button:nth-child(1):hover {
+  background-color: transparent;
+  border: 2px solid rgb(174, 11, 128);
+  color: rgb(174, 11, 128);
+}
+
+.__navbar-list-button button:nth-child(2):hover {
+  background-color: rgb(174, 11, 128);
+  border: 2px solid rgb(174, 11, 128);
+  color: white;
+}
+
+/* ============================================================== */
+
+.__hero-container {
+  padding: 40px;
+  background-color: #1f2020;
+}
+
+.__hero-section {
+  display: grid;
+  max-width: 1280px;
+  margin: 0 auto;
+  grid-template-columns: 4fr 1fr;
+  gap: 24px;
+}
+
+.__list-images-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.__hero-main-images {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.__hero-sub-images {
+  width: 100%;
+  border-radius: 14px;
+  border: 4px solid transparent;
+  cursor: pointer;
+  transition: all ease-in 0.2s;
+}
+
+.__hero-sub-images:hover {
+  border: 4px solid rgb(174, 11, 128);
+}
+
+.__main-images-container {
+  position: relative;
+}
+
+.__main-images-detail {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  max-width: 600px;
+  background: rgba(212, 14, 0, 0.2);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.__main-images-detail p {
+  margin-top: 16px;
+}
+
+/* ==================modal */
+
+.__modal-login-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+
+.__modal-login-container-shown {
+  scale: 1;
+  opacity: 1;
+}
+
+.__modal-login-section {
+  background-color: #1f2020;
+  padding: 35px;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.__modal-login-section p:nth-child(1) {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.__modal-login-list-input {
+  display: flex;
+  flex-direction: column;
+  min-width: 420px;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.__modal-login-list-input input {
+  outline: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid #3c3c3c;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.09);
+  background-color: #3c3c3c;
+  color: whitesmoke;
+}
+
+.__modal-login-section button {
+  background-color: rgb(174, 11, 128);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 8px;
+  color: whitesmoke;
+  margin-top: 45px;
+}
+
+.__register-redirect-content {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.__register-redirect-content span {
+  color: rgb(185, 31, 31);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.__list-game-container {
+  background-color: #1f2020;
+}
+
+.__list-game-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 36px;
+  color: whitesmoke;
+}
+
+.__list-game-section h2 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 24px;
+}
+
+.__list-games-card-list {
+  display: flex;
+  margin-top: 24px;
+  justify-content: space-between;
+}
+
+.__list-games-card-list .__list-games-card img {
+  height: 280px;
+  width: 210px;
+}
+
+.__list-games-card {
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.__list-games-card:hover {
+  scale: 1.05;
+}
+
+.__list-games-genre {
+  font-size: 8px;
+  font-weight: 600;
+  padding: 4px;
+  background-color: #3c3c3c;
+  border-radius: 3px;
+  max-width: fit-content;
+  margin: 4px 0;
+}
+
+.__list-games-title {
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.__list-games-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.__list-games-detail .__discount-percent {
+  font-size: 12px;
+  font-weight: 600;
+  color: green;
+  background-color: rgba(0, 128, 0, 0.263);
+  border-radius: 3px;
+  max-width: fit-content;
+  padding: 6px;
+}
+
+.__list-game-prices p:nth-child(1) {
+  text-decoration: line-through;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8d8b8b;
+}
+
+.__list-game-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.__list-game-prices p:nth-child(2) {
+  font-weight: bold;
+}
+
+/* ========================================================= */
+
+.__iframe-video-sc {
+  width: 380px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.__stream-title {
+  max-width: 380px;
+  margin-top: 12px;
+}
+
+/* ==================================== */
+.__footer-container {
+  border-top: 1px solid gray;
+}
+
+.__footer-sec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.__footer-sec p:nth-child(2) {
+  font-weight: 600;
+}
