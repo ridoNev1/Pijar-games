@@ -26,19 +26,30 @@
     <nav class="__navbar-container">
       <div class="__navbar-section">
         <h1 class="text-red __navbar-logo">Pijar Games</h1>
-        <div class="__navbar-search">
-          <input type="text" placeholder="Search Games" />
-          <img src="./search.png" alt="search-logo" />
-        </div>
-        <div class="__navbar-list-menu">
-          <a href="/index.html">Home</a>
-          <a href="./discover.html">Discover</a>
-          <a href="#">About</a>
-          <a href="#">Contact Us</a>
-        </div>
-        <div class="__navbar-list-button">
-          <button id="login-btn">Login</button>
-          <button>Signup</button>
+        <button class="__button-toggle-menu" id="button-toggle-menu">
+          MENU
+        </button>
+        <div class="__sub-navbar-content">
+          <button
+            class="__button-toggle-menu __btn-togle-menu-close"
+            id="button-toggle-menu-close"
+          >
+            Close
+          </button>
+          <div class="__navbar-search">
+            <input type="text" placeholder="Search Games" />
+            <img src="./search.png" alt="search-logo" />
+          </div>
+          <div class="__navbar-list-menu">
+            <a href="/index.html">Home</a>
+            <a href="./discover.html">Discover</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <div class="__navbar-list-button">
+            <button id="login-btn">Login</button>
+            <button>Signup</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -52,7 +63,11 @@
             alt="main-image-banner"
             id="__hero-main-images"
           />
-          <div class="__main-images-detail" id="__main-images-detail">
+          <div
+            class="__main-images-detail"
+            id="__main-images-detail"
+            style="display: none"
+          >
             <h2>Valorant</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -168,7 +183,7 @@
     <section class="__list-game-container">
       <div class="__list-game-section">
         <h2>Stream Now</h2>
-        <div class="__list-games-card-list">
+        <div class="__list-games-card-list __stream-list-card">
           <div class="__list-card-stream">
             <iframe
               src="https://www.youtube.com/embed/IdF-HT8pL2Y?si=IwK477FIgIG9RQ8S"
@@ -324,6 +339,26 @@
           mainTitle.innerHTML = el?.getAttribute("alt");
         });
       });
+
+      const data = {
+        alamat: null,
+      };
+
+      console.log(data?.alamat?.rw);
+
+      // ===============================================
+      const buttonTogle = document.querySelector("#button-toggle-menu");
+      const subNavbarContent = document.querySelector(".__sub-navbar-content");
+      const buttonTogleMenuClose = document.querySelector(
+        "#button-toggle-menu-close"
+      );
+
+      const interactNavbar = () => {
+        subNavbarContent.classList.toggle("__sub-navbar-content-shown");
+      };
+
+      buttonTogle.addEventListener("click", interactNavbar);
+      buttonTogleMenuClose.addEventListener("click", interactNavbar);
     </script>
   </body>
 </html>
